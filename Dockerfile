@@ -1,5 +1,8 @@
 FROM ubuntu
 
+# To stop a promt from stopping the build
+RUN export DEBIAN_FRONTEND=noninteractive \
+
 # Install missing tools
 RUN apt-get update && \
     apt-get upgrade -y && \
